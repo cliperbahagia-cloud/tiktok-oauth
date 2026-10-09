@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>TikTok OAuth Callback</title>
+</head>
+<body>
+  <h3>Kode otorisasi TikTok</h3>
+  <p>Salin kode di bawah ini ke skrip Python kamu:</p>
+  <pre id="out">Menunggu...</pre>
+  <script>
+    const p = new URLSearchParams(location.search);
+    document.getElementById("out").textContent =
+      p.get("code") || p.get("error_description") || "Tidak ada code di URL";
+  </script>
+</body>
+</html>
